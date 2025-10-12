@@ -160,8 +160,7 @@ const AboutSection = () => {
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 I'm <span className="font-semibold gradient-text">Ajit Kumar Behera </span>, a dedicated 
                 Software Developer with a strong foundation in both mobile and web technologies. 
-                My journey in software development began at EATM College, Bhubaneswar, Odisha, where I developed a 
-                passion for creating innovative solutions.
+                My journey in software development began at <a href="https://eatm.in/" target="_blank" rel="noopener noreferrer" className="font-semibold gradient-text">Einstein Academy of Technology And Management</a>, Bhubaneswar, Odisha, under <a href="https://www.bput.ac.in/" target="_blank" rel="noopener noreferrer" className="font-semibold gradient-text">Biju Patnaik University of Technology</a>,Odisha. where I developed a passion for creating innovative solutions.
               </p>
             </motion.div>
 
@@ -173,14 +172,14 @@ const AboutSection = () => {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                    <span className="font-medium">8 Months Training In Pyspider, Bhubaneswar, Odisha. jun 2024 - feb 2025:</span> Started with intensive 
+                    <span className="font-medium">8 Months Training In <a href="https://www.instagram.com/qspiders_bhubaneswar/?hl=en" target="_blank" rel="noopener noreferrer" className="font-semibold gradient-text"> Pyspider </a>, Bhubaneswar, Odisha. july 2024 - feb 2025:</span> Started with intensive 
                     training in software development fundamentals and testing methodologies.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                    <span className="font-medium">7 Months Experience:</span> Worked as both 
+                    <span className="font-medium">Software Developer & Tester |<a href="https://www.linkedin.com/company/keyssin/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="font-semibold gradient-text"> KEYSS </a>  | March 2025 – Present:</span> Worked as both 
                     Software Developer (Client side and Server side) and Software Tester, gaining 
                     comprehensive industry experience.
                   </p>
@@ -188,9 +187,7 @@ const AboutSection = () => {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                    <span className="font-medium">Current Focus:</span> Specializing in 
-                    Flutter mobile development, Mobile applications, and full-stack 
-                    web development with modern technologies.
+                    <span className="font-medium">Current Focus:</span> Specializing in mobile development, mobile applications, and full-stack web development using modern technologies like Python, Django, React,Flutter and Node.js.
                   </p>
                 </div>
               </div>
@@ -209,7 +206,11 @@ const AboutSection = () => {
                   'Database Design',
                   'Testing & QA',
                   'UI/UX Design',
-                  'Project Management'
+                  'Project Management',
+                  'React',
+                  'HTML & CSS',
+                  'Tailwind',
+                  'Wordpress',
                 ].map((skill, index) => (
                   <motion.div
                     key={index}
