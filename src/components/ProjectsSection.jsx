@@ -20,8 +20,8 @@ const ProjectsSection = () => {
       'Real-time booking management',
       'User authentication and profile management',
     ],
-      github: 'https://github.com/nitishkumar/grocery-app',
-      demo: 'https://grocery-app-demo.netlify.app',
+      github: 'https://github.com/ajit432/1-Bike-Rentral-Portal-Django_Project',
+      // demo: '',
       status: 'Completed'
     },
     {
@@ -37,8 +37,8 @@ const ProjectsSection = () => {
         'Encrypted login system with email and password',
         'Admin panel to view and manage all student details'
       ],
-      github: 'https://github.com/nitishkumar/ar-scanner',
-      demo: 'https://ar-scanner-demo.com',
+      github: 'https://github.com/ajit432/p-2-Student-Registration-Portal',
+      // demo: '',
       status: 'Completed'
     },
     {
@@ -54,8 +54,8 @@ const ProjectsSection = () => {
       'Project showcase and personal information',
       'Interactive and dynamic UI with React'
       ],
-      github: 'https://github.com/nitishkumar/smart-lock',
-      demo: 'https://smart-lock-dashboard.herokuapp.com',
+      github: 'https://github.com/ajit432/p-3-Ajit-Portfolio-React',
+      // demo: '',
       status: 'Completed'
     },
     {
@@ -71,8 +71,8 @@ const ProjectsSection = () => {
       'Doctors can apply leave with conditions',
       'Admin can approve, reject, or set leave policies'
       ],
-      github: 'https://github.com/nitishkumar/employee-manager',
-      demo: 'https://employee-manager-demo.com',
+      github: 'https://github.com/ajit432/4-Hospital-Leave-System-React',
+      // demo: '',
       status: 'In Development'
     },
       {
@@ -88,8 +88,8 @@ const ProjectsSection = () => {
       'HR dashboard for employee management, leave, and appraisal',
       'Admin access with role-based authentication'
     ],
-    github: 'https://github.com/nitishkumar/it-employee-management',
-    demo: 'https://it-employee-demo.com',
+    // github: '',
+    // demo: '',
     status: 'In Development'
   }
   ];
@@ -151,9 +151,8 @@ const ProjectsSection = () => {
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
           >
-            A showcase of my recent work spanning mobile applications, web development, 
-            AR/VR experiences, and IoT solutions. Each project demonstrates my commitment 
-            to quality and innovation.
+            A showcase of my recent work spanning mobile applications, web development.
+            Each project demonstrates my commitment to quality and innovation.
           </motion.p>
         </motion.div>
 
@@ -197,7 +196,7 @@ const ProjectsSection = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
+                        className="flex items-center justify-center p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
                       >
                         <Github size={16} />
                       </motion.a>
@@ -207,7 +206,7 @@ const ProjectsSection = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
+                        className="flex items-center justify-center p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
                       >
                         <ExternalLink size={16} />
                       </motion.a>
