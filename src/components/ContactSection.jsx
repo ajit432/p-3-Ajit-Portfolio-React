@@ -1,20 +1,31 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { 
-  Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, 
-  MessageCircle, Clock, Globe, CheckCircle, Calendar 
-} from 'lucide-react';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+  MessageCircle,
+  Clock,
+  Globe,
+  CheckCircle,
+  Calendar,
+} from "lucide-react";
+import emailjs from "emailjs-com";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -22,90 +33,128 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'ajitkumarbehera875@gmail.com',
-      href: 'mailto:ajitkumarbehera875@gmail.com',
-      color: 'from-blue-500 to-cyan-500'
+      label: "Email",
+      value: "ajitkumarbehera875@gmail.com",
+      href: "mailto:ajitkumarbehera875@gmail.com",
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+91 9861500797',
-      href: 'tel:+919861500797',
-      color: 'from-green-500 to-emerald-500'
+      label: "Phone",
+      value: "+91 9861500797",
+      href: "tel:+919861500797",
+      color: "from-green-500 to-emerald-500",
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'Bhubaneswar, Odisha, India',
-      href: 'https://maps.google.com/?q=Bhubaneswar,Odisha,India',
-      color: 'from-purple-500 to-violet-500'
+      label: "Location",
+      value: "Bhubaneswar, Odisha, India",
+      href: "https://maps.google.com/?q=Bhubaneswar,Odisha,India",
+      color: "from-purple-500 to-violet-500",
     },
     {
       icon: Globe,
-      label: 'Website',
-      value: 'Ajit.dev',
-      href: 'https://nitishkumar.dev',
-      color: 'from-orange-500 to-red-500'
-    }
+      label: "Website",
+      value: "Ajit.dev",
+      href: "https://nitishkumar.dev",
+      color: "from-orange-500 to-red-500",
+    },
   ];
 
   const socialLinks = [
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: Github,
-      href: 'https://github.com/nitishkumar',
-      color: 'hover:bg-gray-700',
-      followers: '250+ followers'
+      href: "https://github.com/nitishkumar",
+      color: "hover:bg-gray-700",
+      followers: "250+ followers",
     },
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: Linkedin,
-      href: 'https://linkedin.com/in/nitishkumar',
-      color: 'hover:bg-blue-600',
-      followers: '500+ connections'
+      href: "https://linkedin.com/in/nitishkumar",
+      color: "hover:bg-blue-600",
+      followers: "500+ connections",
     },
     {
-      name: 'Twitter',
+      name: "Twitter",
       icon: Twitter,
-      href: 'https://twitter.com/nitishkumar',
-      color: 'hover:bg-blue-400',
-      followers: '150+ followers'
+      href: "https://twitter.com/nitishkumar",
+      color: "hover:bg-blue-400",
+      followers: "150+ followers",
     },
     {
-      name: 'WhatsApp',
+      name: "WhatsApp",
       icon: MessageCircle,
-      href: 'https://wa.me/919861500797',
-      color: 'hover:bg-green-500',
-      followers: 'Quick chat'
-    }
+      href: "https://wa.me/919861500797",
+      color: "hover:bg-green-500",
+      followers: "Quick chat",
+    },
   ];
 
   const availabilityStatus = {
-    status: 'Available',
-    message: 'Open to new opportunities',
-    responseTime: 'Usually responds within 24 hours',
-    timezone: 'IST (GMT+5:30)'
+    status: "Available",
+    message: "Open to new opportunities",
+    responseTime: "Usually responds within 24 hours",
+    timezone: "IST (GMT+5:30)",
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
+    try {
+      // 1️⃣ Send email to yourself (admin)
+      const result = await emailjs.send(
+        "service_eqs5wek", // e.g. 'service_123abc'
+        "template_4ejfkel", // e.g. 'template_xyz'
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "QjLDTLfHFZc9x1ZT5" // e.g. 'user_ABC123XYZ'
+      );
+
+      // 2️⃣ Send confirmation email to user
+      await emailjs.send(
+        "service_eqs5wek", // Can use same service
+        "template_2sobq63", // Create a new template in EmailJS
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "QjLDTLfHFZc9x1ZT5"
+      );
+      console.log("User Confirmation Email Sent");
+
+      console.log(result.text);
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("❌ EmailJS Error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
       // Reset status after 3 seconds
       setTimeout(() => setSubmitStatus(null), 3000);
     }, 2000);
@@ -117,9 +166,9 @@ const ContactSection = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   const itemVariants = {
@@ -129,9 +178,9 @@ const ContactSection = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -157,8 +206,9 @@ const ContactSection = () => {
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
           >
-            Ready to start your next project? Let's discuss how we can work together 
-            to bring your ideas to life. I'm always excited to take on new challenges.
+            Ready to start your next project? Let's discuss how we can work
+            together to bring your ideas to life. I'm always excited to take on
+            new challenges.
           </motion.p>
         </motion.div>
 
@@ -186,7 +236,9 @@ const ContactSection = () => {
               </p>
               <div className="flex items-center text-xs text-gray-500 dark:text-gray-500 mb-1">
                 <Clock size={10} className="sm:w-3 sm:h-3 mr-1" />
-                <span className="text-xs">{availabilityStatus.responseTime}</span>
+                <span className="text-xs">
+                  {availabilityStatus.responseTime}
+                </span>
               </div>
               <div className="text-xs text-gray-500 dark:text-gray-500">
                 Timezone: {availabilityStatus.timezone}
@@ -208,12 +260,18 @@ const ContactSection = () => {
                     <motion.a
                       key={index}
                       href={info.href}
-                      target={info.href.startsWith('http') ? '_blank' : '_self'}
-                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : ''}
+                      target={info.href.startsWith("http") ? "_blank" : "_self"}
+                      rel={
+                        info.href.startsWith("http")
+                          ? "noopener noreferrer"
+                          : ""
+                      }
                       whileHover={{ scale: 1.02 }}
                       className="flex items-center p-2.5 sm:p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group"
                     >
-                      <div className={`w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r ${info.color} rounded-lg flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <div
+                        className={`w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r ${info.color} rounded-lg flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300`}
+                      >
                         <IconComponent className="text-white" size={16} />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -253,7 +311,9 @@ const ContactSection = () => {
                     >
                       <IconComponent className="mx-auto mb-1" size={18} />
                       <p className="text-xs font-medium">{social.name}</p>
-                      <p className="text-xs opacity-75 truncate">{social.followers}</p>
+                      <p className="text-xs opacity-75 truncate">
+                        {social.followers}
+                      </p>
                     </motion.a>
                   );
                 })}
@@ -275,11 +335,14 @@ const ContactSection = () => {
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
                 Send a Message
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >
                       Full Name *
                     </label>
                     <motion.input
@@ -294,9 +357,12 @@ const ContactSection = () => {
                       placeholder="Your full name"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >
                       Email Address *
                     </label>
                     <motion.input
@@ -314,7 +380,10 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Subject *
                   </label>
                   <motion.input
@@ -331,7 +400,10 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Message *
                   </label>
                   <motion.textarea
@@ -368,14 +440,16 @@ const ContactSection = () => {
                 </motion.button>
 
                 {/* Success Message */}
-                {submitStatus === 'success' && (
+                {submitStatus === "success" && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-2 p-4 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-lg border border-green-200 dark:border-green-700"
                   >
                     <CheckCircle size={18} />
-                    <span>Message sent successfully! I'll get back to you soon.</span>
+                    <span>
+                      Message sent successfully! I'll get back to you soon.
+                    </span>
                   </motion.div>
                 )}
               </form>
@@ -395,8 +469,9 @@ const ContactSection = () => {
               Ready to Start Your Project?
             </h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Let's turn your ideas into reality. Whether it's a mobile app, web application, 
-              or custom software solution, I'm here to help you succeed.
+              Let's turn your ideas into reality. Whether it's a mobile app, web
+              application, or custom software solution, I'm here to help you
+              succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <motion.a
