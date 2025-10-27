@@ -116,10 +116,10 @@ theme: {
 
 ## 📞 Contact
 
-**Nitish Kumar**
-- Email: nitishpatel212000@gmail.com
-- LinkedIn: [linkedin.com/in/nitishkumar](https://linkedin.com/in/nitishkumar)
-- GitHub: [github.com/nitishkumar](https://github.com/nitishkumar)
+**Ajit Kumar Behera**
+- Email:  
+- LinkedIn:  
+- GitHub:  
 - Location: Bhubaneswar, Odisha, India
 
 ## 📄 License
