@@ -1,6 +1,6 @@
 # Ajit Kumar Behera- Portfolio Website
 
-A modern, responsive personal portfolio website showcasing the work and expertise of Nitish Kumar, a Software Developer with 1.5 years of experience.
+A modern, responsive personal portfolio website showcasing the work and expertise of Ajit Kumar, a Software Developer with 1.5 years of experience.
 
 ## ✨ Features
 
