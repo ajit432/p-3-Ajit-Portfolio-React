@@ -1,4 +1,4 @@
-# Nitish Kumar - Portfolio Website
+# Ajit Kumar - Portfolio Website
 
 A modern, responsive personal portfolio website showcasing the work and expertise of Nitish Kumar, a Software Developer with 1.5 years of experience.
 
@@ -116,10 +116,10 @@ theme: {
 
 ## 📞 Contact
 
-**Nitish Kumar**
-- Email: nitishpatel212000@gmail.com
-- LinkedIn: [linkedin.com/in/nitishkumar](https://linkedin.com/in/nitishkumar)
-- GitHub: [github.com/nitishkumar](https://github.com/nitishkumar)
+**Ajit Kumar**
+- Email: ajitkumarbehera875@gmail.com
+- LinkedIn: 
+- GitHub:  
 - Location: Bhubaneswar, Odisha, India
 
 ## 📄 License
