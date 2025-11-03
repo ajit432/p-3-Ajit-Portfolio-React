@@ -89,17 +89,17 @@ useEffect(() => {
 const socialLinks = [
   {
     icon: Github,
-    href: 'https://github.com/nitishkumar',
+    href: 'https://github.com/ajit432',
     label: 'GitHub'
   },
   {
     icon: Linkedin,
-    href: 'https://linkedin.com/in/nitishkumar',
+    href: 'https://www.linkedin.com/in/ajit-kumar-behera-6842a7213/',
     label: 'LinkedIn'
   },
   {
     icon: Mail,
-    href: 'mailto:nitish@example.com',
+    href: 'mailto:ajitkumarbehera875@gmail.com',
     label: 'Email'
   }
 ];
@@ -148,7 +148,7 @@ const socialLinks = [
 ```javascript
 <motion.a
   href="/Ajit Kumar Behera.pdf"
-  download="Nitish_Kumar_Resume.pdf"
+  download="Ajit_Kumar_Resume.pdf"
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
   className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-blue-500 text-blue-500 dark:text-blue-400 font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"

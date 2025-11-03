@@ -58,7 +58,7 @@ const projects = [
       'Real-time booking management',
       'User authentication and profile management',
     ],
-    github: 'https://github.com/nitishkumar/grocery-app',
+    github: '',
     demo: 'https://grocery-app-demo.netlify.app',
     status: 'Completed'
   },

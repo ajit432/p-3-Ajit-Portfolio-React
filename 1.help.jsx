@@ -12,7 +12,7 @@ const projects = [
       'Real-time booking management',
       'User authentication and profile management'
     ],
-    github: 'https://github.com/nitishkumar/bikewala',
+    github: 'https://github.com/ajit432/1-Bike-Rentral-Portal-Django_Project',
     demo: 'https://bikewala-demo.com',
     status: 'Completed'
   },
@@ -29,7 +29,7 @@ const projects = [
       'Encrypted login system with email and password',
       'Admin panel to view and manage all student details'
     ],
-    github: 'https://github.com/nitishkumar/student-registration',
+    github: 'https://github.com/ajit432/p-2-Student-Registration-Portal/tree/ajit.sept/class25_userregistration_loginlogout',
     demo: 'https://student-registration-demo.com',
     status: 'Completed'
   },
@@ -46,8 +46,8 @@ const projects = [
       'Project showcase and personal information',
       'Interactive and dynamic UI with React'
     ],
-    github: 'https://github.com/nitishkumar/portfolio',
-    demo: 'https://nitish-portfolio.netlify.app',
+    github: 'https://github.com/ajit432/p-3-Ajit-Portfolio-React',
+    demo: 'https://ajitkumarbehera.netlify.app/',
     status: 'Completed'
   },
   {
@@ -63,7 +63,7 @@ const projects = [
       'Doctors can apply leave with conditions',
       'Admin can approve, reject, or set leave policies'
     ],
-    github: 'https://github.com/nitishkumar/hospital-leave-management',
+    github: 'https://github.com/ajit432/4-Hospital-Leave-System-React',
     demo: 'https://hospital-leave-demo.com',
     status: 'In Development'
   },
@@ -80,8 +80,8 @@ const projects = [
       'HR dashboard for employee management, leave, and appraisal',
       'Admin access with role-based authentication'
     ],
-    github: 'https://github.com/nitishkumar/it-employee-management',
-    demo: 'https://it-employee-demo.com',
+    // github: '',
+    // demo: 'https://it-employee-demo.com',
     status: 'In Development'
   }
 ];

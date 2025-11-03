@@ -45,7 +45,7 @@ const ContactSection = () => {
       icon: Globe,
       label: 'Website',
       value: 'Ajit.dev',
-      href: 'https://nitishkumar.dev',
+      href: 'https://ajitkumarbehera.netlify.app/',
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -54,21 +54,21 @@ const ContactSection = () => {
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/nitishkumar',
+      href: 'https://github.com/ajit432',
       color: 'hover:bg-gray-700',
       followers: '250+ followers'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/nitishkumar',
+      href: 'https://www.linkedin.com/in/ajit-kumar-behera-6842a7213/',
       color: 'hover:bg-blue-600',
       followers: '500+ connections'
     },
     {
       name: 'Twitter',
       icon: Twitter,
-      href: 'https://twitter.com/nitishkumar',
+      href: 'https://x.com/AjitKumar875',
       color: 'hover:bg-blue-400',
       followers: '150+ followers'
     },
@@ -400,7 +400,7 @@ const ContactSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <motion.a
-                href="mailto:nitishpatel212000@gmail.com"
+                href="mailto:ajitkumarbehera875@gmail.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
@@ -408,8 +408,8 @@ const ContactSection = () => {
                 <Mail size={16} className="sm:w-[18px] sm:h-[18px]" />
                 Email Me Directly
               </motion.a>
-              <motion.a
-                href="https://calendly.com/nitishkumar"
+              {/* <motion.a
+                href="https://calendly.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -418,7 +418,7 @@ const ContactSection = () => {
               >
                 <Calendar size={16} className="sm:w-[18px] sm:h-[18px]" />
                 Schedule a Call
-              </motion.a>
+              </motion.a> */}
             </div>
           </div>
         </motion.div>

@@ -188,10 +188,10 @@ const handleSubmit = async (e) => {
 ### External APIs
 
 #### Social Media Links
-- **GitHub**: https://github.com/nitishkumar
-- **LinkedIn**: https://linkedin.com/in/nitishkumar
-- **Twitter**: https://twitter.com/nitishkumar
-- **Email**: mailto:nitish@example.com
+- **GitHub**: https://github.com/ajit432
+- **LinkedIn**: https://www.linkedin.com/in/ajit-kumar-behera-6842a7213/
+- **Twitter**: https://x.com/AjitKumar875
+- **Email**: mailto:ajitkumarbehera875@gmail.com
 
 #### Resume Download API
 ```javascript
@@ -396,5 +396,5 @@ This project is for portfolio purposes. All rights reserved.
 
 For questions or support:
 - Email: ajitkumarbehera875@gmail.com
-- GitHub: https://github.com/nitishkumar
-- LinkedIn: https://linkedin.com/in/nitishkumar
+- GitHub: https://github.com/ajit432
+- LinkedIn: https://www.linkedin.com/in/ajit-kumar-behera-6842a7213/

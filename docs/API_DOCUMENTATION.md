@@ -211,7 +211,7 @@ const itemVariants = {
 {
   name: 'GitHub',
   icon: Github,
-  href: 'https://github.com/nitishkumar',
+  href: 'https://github.com/ajit432',
   color: 'hover:bg-gray-700',
   followers: '250+ followers'
 }
@@ -222,7 +222,7 @@ const itemVariants = {
 {
   name: 'LinkedIn',
   icon: Linkedin,
-  href: 'https://linkedin.com/in/nitishkumar',
+  href: 'https://linkedin.com/in/ajit-kumar-behera-6842a7213/',
   color: 'hover:bg-blue-600',
   followers: '500+ connections'
 }
@@ -233,7 +233,7 @@ const itemVariants = {
 {
   name: 'Twitter',
   icon: Twitter,
-  href: 'https://twitter.com/nitishkumar',
+  href: 'https://x.com/AjitKumar875',
   color: 'hover:bg-blue-400',
   followers: '150+ followers'
 }

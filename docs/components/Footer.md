@@ -57,9 +57,9 @@ const footerLinks = {
   ],
   connect: [
     { name: 'GitHub', href: 'https://github.com/sampleritgithuber', icon: Github },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/nitish-kumar-7900a9248/', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/nitishkumar', icon: Twitter },
-    { name: 'Email', href: 'mailto:nitishpatel212000@gmail.com', icon: Mail }
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ajit-kumar-behera-6842a7213/', icon: Linkedin },
+    { name: 'Twitter', href: 'https://x.com/AjitKumar875', icon: Twitter },
+    { name: 'Email', href: 'mailto:ajitkumarbehera875@gmail.com', icon: Mail }
   ]
 };
 ```
