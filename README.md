@@ -119,7 +119,7 @@ theme: {
 **Ajit Kumar Behera**
 - Email: ajitkumarbehera875@gmail.com
 - LinkedIn: [linkedin.com/in/ajit-kumar-behera-6842a7213](https://www.linkedin.com/in/ajit-kumar-behera-6842a7213/)
-- GitHub: [github.com/ajit432](hhttps://github.com/ajit432)
+- GitHub: [github.com/ajit432](https://github.com/ajit432)
 - Location: Bhubaneswar, Odisha, India
 
 ## 📄 License
